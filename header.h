@@ -6,7 +6,7 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 15:14:19 by msbai             #+#    #+#             */
-/*   Updated: 2024/02/05 03:27:27 by msbai            ###   ########.fr       */
+/*   Updated: 2024/02/06 04:06:11 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,7 @@ int checklist(char *str);
 // this functions for control the stack
 t_list *fillstck(char *str);
 int checknbr(t_list * list, long int nbr);
+
+// this is fucntion used to manipulate stack
+t_list* sa(t_list **stack);
 #endif
