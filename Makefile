@@ -6,12 +6,12 @@
 #    By: msbai <msbai@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/02 15:14:27 by msbai             #+#    #+#              #
-#    Updated: 2024/02/06 04:06:01 by msbai            ###   ########.fr        #
+#    Updated: 2024/02/10 12:04:35 by msbai            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 RED=\e[31m
 GREEN=\e[32m
@@ -24,13 +24,13 @@ NAME = push_swap
 MANIFILE = push_swap.c
 CFILE = checkErerr.c\
 		 fillstack.c\
-		 sa.c
-
+		 ft_mouves.c\
+		 ft_rules.c
 
 all:$(NAME)
 
 $(NAME):$(CFILE) $(MANIFILE) $(ARCHIV)
-	@$(CC)  $(MANIFILE) $(CFILE) $(ARCHIV)  -o $@
+	@$(CC)  $(MANIFILE) $(CFILE) printlist.c $(ARCHIV)  -o $@
 	@echo "$(GREEN)push_swap is ready 🧑$(WHITE)\n"
 
 

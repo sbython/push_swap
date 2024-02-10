@@ -6,7 +6,7 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:53:12 by msbai             #+#    #+#             */
-/*   Updated: 2024/02/05 03:56:21 by msbai            ###   ########.fr       */
+/*   Updated: 2024/02/10 19:00:15 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 typedef struct s_list
 {
 	long int			content;
-	struct s_list	*next;
+	struct s_list		*next;
 }					t_list;
 
 void				ft_lstclear(t_list **lst, void (*del)(long int));

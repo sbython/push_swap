@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sa.c                                               :+:      :+:    :+:   */
+/*   printlist.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/06 04:01:29 by msbai             #+#    #+#             */
-/*   Updated: 2024/02/07 23:12:14 by msbai            ###   ########.fr       */
+/*   Created: 2024/02/08 04:19:58 by msbai             #+#    #+#             */
+/*   Updated: 2024/02/10 18:59:11 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-t_list** sa(t_list** stack)
+void	printf_list(char *msg, t_list *list)
 {
-    t_list *ptr;
-    int nbr;
-    
-    ptr = *stack;
-    if (!stack || !*stack || !(ptr->next))
-        return (NULL);
+	t_list	*p;
+
+	p = list;
+	ft_printf("\n");
+	ft_printf("%s ", msg);
+	if (list == NULL)
+	{
+		ft_printf(" emty \n");
+		return ;
+	}
+	while (p)
+	{
+		ft_printf("%d ", p->content);
+		p = p->next;
+	}
 }
