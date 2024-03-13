@@ -6,7 +6,7 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:53:12 by msbai             #+#    #+#             */
-/*   Updated: 2024/02/10 19:00:15 by msbai            ###   ########.fr       */
+/*   Updated: 2024/03/10 15:42:00 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 typedef struct s_list
 {
+	int					index;
 	long int			content;
 	struct s_list		*next;
 }					t_list;
@@ -64,5 +65,4 @@ void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
-
 #endif

@@ -6,12 +6,12 @@
 #    By: msbai <msbai@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/02 15:14:27 by msbai             #+#    #+#              #
-#    Updated: 2024/02/10 12:04:35 by msbai            ###   ########.fr        #
+#    Updated: 2024/03/08 16:43:02 by msbai            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror #-fsanitize=adress
 
 RED=\e[31m
 GREEN=\e[32m
@@ -23,9 +23,13 @@ ARCHIV = libft/libft.a ft_printf/libftprintf.a
 NAME = push_swap
 MANIFILE = push_swap.c
 CFILE = checkErerr.c\
-		 fillstack.c\
-		 ft_mouves.c\
-		 ft_rules.c
+			fillstack.c\
+			ft_mouves.c\
+			ft_rules.c\
+			sort3.c\
+			sort5.c\
+			sort100.c\
+			temft.c
 
 all:$(NAME)
 

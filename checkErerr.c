@@ -6,19 +6,20 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 03:40:22 by msbai             #+#    #+#             */
-/*   Updated: 2024/02/10 18:57:17 by msbai            ###   ########.fr       */
+/*   Updated: 2024/03/13 20:41:53 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-void	ererr(void)
+void	ererr(void *str)
 {
-	ft_printf("Error\n")
+	free(str);
+	ft_printf("Error\n");
 	exit(1);
 }
 
-char	*addspaic(char *ptr)
+char	*addspace(char *ptr)
 {
 	char	*p;
 
@@ -57,11 +58,16 @@ char	*returnstr(int ac, char **av)
 	start = 1;
 	while (start < ac)
 	{
-		tmp = ptr;
 		if (ft_isnotvalid(av[start]))
-			ererr();
-		ptr = addspaic(ft_strjoin(ptr, av[start++]));
+		{
+			frfun(av);
+			ererr(ptr);
+		}
+		tmp = ptr;
+		av[start] = rm_zero(av[start]);
+		ptr = addspace(ft_strjoin(ptr, av[start]));
 		free(tmp);
+		free(av[start++]);
 	}
 	return (ptr);
 }
@@ -72,15 +78,15 @@ int	checklist(char *str)
 	char	c;
 
 	i = 0;
-	if (!str)
-		return (ft_printf("EREER\n"), 0);
+	if (!str )
+		ererr(str);
 	while (str[i])
 	{
 		c = str[i];
 		if ((c == '-' || c == '+') && !(str[i + 1] >= '0' && str[i + 1] <= '9'))
-			ererr();
+			ererr(str);
 		else if ((c < '0' || c > '9') && !(c == '-' || c == '+' || c == ' '))
-			ererr();
+			ererr(str);
 		i++;
 	}
 	return (1);

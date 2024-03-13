@@ -6,7 +6,7 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 11:56:44 by msbai             #+#    #+#             */
-/*   Updated: 2024/02/10 18:57:49 by msbai            ###   ########.fr       */
+/*   Updated: 2024/03/05 15:08:30 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ void	pab(int i, t_list **s_a, t_list **s_b)
 {
 	if (i)
 	{
-		ft_printf("sa\n");
+		ft_printf("pb\n");
 		push(s_a, s_b);
 	}
-	else if (!i)
+	else 
 	{
-		ft_printf("sb\n");
+		ft_printf("pa\n");
 		push(s_b, s_a);
 	}
 }
