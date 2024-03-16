@@ -6,7 +6,7 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 15:56:29 by msbai             #+#    #+#             */
-/*   Updated: 2024/03/13 20:37:27 by msbai            ###   ########.fr       */
+/*   Updated: 2024/03/16 03:39:37 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,9 +85,19 @@ int	find_index(t_list *s_a, int x, int p)
 char    *rm_zero(char *str)
 {
     int i;
-    
+    char *ptr;
+    char c;
     i = 0;
+    if (str[i] == '+' || str[i] == '-')
+        i++;
     while (str[i] == '0' && str[i])
         i++;
-    return (ft_substr(str, i, ft_strlen(str)));
+    
+    ptr = ft_substr(str, i, ft_strlen(str));
+    ft_printf("%s", ptr);
+    if(!ptr)
+    {
+        printf("sorry");
+    }
+    return (ptr);
 }

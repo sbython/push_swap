@@ -39,8 +39,8 @@ for ((i = 0; i < test_count; i++)); do
     args=$(seq $min_range $max_range | shuf -n $arg_count | tr '\n' ' ')
 
     # Run the push_swap program with the generated arguments and pipe the output to checker_linux with the same arguments
-    output=$(./push_swap $args | ./checker_linux $args)
-    len=$(./push_swap $args | wc -l)
+    output=$(./Mandatory/push_swap $args | ./checker_linux $args)
+    len=$(./Mandatory/push_swap $args | wc -l)
     # Check if the output contains the word "OK"
    if [[ $output == *"OK"* ]] && [ "$len" -lt "$maxmv" ]; then
         # echo -e "Test $i ${GREEN_BOLD}OK${NC}"

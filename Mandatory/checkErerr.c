@@ -6,7 +6,7 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 03:40:22 by msbai             #+#    #+#             */
-/*   Updated: 2024/03/13 20:41:53 by msbai            ###   ########.fr       */
+/*   Updated: 2024/03/14 23:42:43 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int	checklist(char *str)
 
 	i = 0;
 	if (!str )
-		ererr(str);
+		return (0);
 	while (str[i])
 	{
 		c = str[i];
