@@ -12,7 +12,7 @@
 
 #include "header.h"
 
- char	*ft_strchr1(const char *s, int c)
+char	*ft_strchr1(const char *s, int c)
 {
 	int	i;
 

@@ -6,7 +6,7 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 03:34:39 by msbai             #+#    #+#             */
-/*   Updated: 2024/03/15 22:16:00 by msbai            ###   ########.fr       */
+/*   Updated: 2024/03/17 07:08:12 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*get_read(char *save_str, int fd)
 		return (NULL);
 	}
 	read_n = 1;
-	while (!ft_strchr(save_str, '\n'))
+	while (!ft_strchr1(save_str, '\n'))
 	{
 		read_n = read(fd, buffer, BUFFER_SIZE);
 		if (read_n <= 0)
@@ -62,7 +62,7 @@ char	*get_line(char *save_str)
 		free(save_str);
 		return (NULL);
 	}
-	ft_memcpy(line, save_str, i);
+	ft_memcpy1(line, save_str, i);
 	line[i] = '\0';
 	return (line);
 }
@@ -82,7 +82,7 @@ char	*left_lines(char *line, char *save_str)
 		free(save_str);
 		return (NULL);
 	}
-	new_save_str = malloc(ft_strlen(save_str) - i + 1);
+	new_save_str = malloc(ft_strlen1(save_str) - i + 1);
 	if (!new_save_str)
 	{
 		free(save_str);
@@ -111,4 +111,3 @@ char	*get_next_line(int fd)
 	save_str = left_lines(line, save_str);
 	return (line);
 }
-

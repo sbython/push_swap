@@ -6,14 +6,13 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 23:58:42 by msbai             #+#    #+#             */
-/*   Updated: 2024/03/14 00:12:56 by msbai            ###   ########.fr       */
+/*   Updated: 2024/03/18 22:58:04 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "header.h"
 
-void frfun(char **ptr)
+void	frfun(char **ptr)
 {
 	int	i;
 
@@ -22,6 +21,7 @@ void frfun(char **ptr)
 		free(ptr[i++]);
 	free(ptr);
 }
+
 void	swap(t_list **stack)
 {
 	t_list	*ptr;

@@ -6,17 +6,16 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 23:58:11 by msbai             #+#    #+#             */
-/*   Updated: 2024/03/16 04:10:26 by msbai            ###   ########.fr       */
+/*   Updated: 2024/03/18 20:47:56 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "header.h"
 
 void	ererr(void *str)
 {
 	free(str);
-	ft_printf("Error\n");
+	ft_putstr_fd("Error\n", 2);
 	exit(1);
 }
 
@@ -64,7 +63,6 @@ char	*returnstr(int ac, char **av)
 			ererr(ptr);
 		}
 		tmp = ptr;
-	
 		ptr = addspace(ft_strjoin(ptr, av[start++]));
 		free(tmp);
 	}

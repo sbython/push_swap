@@ -6,7 +6,7 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 04:19:58 by msbai             #+#    #+#             */
-/*   Updated: 2024/03/08 18:47:12 by msbai            ###   ########.fr       */
+/*   Updated: 2024/03/18 21:25:39 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ void	printf_list(char *msg, t_list *list)
 		p = p->next;
 	}
 }
-void print_index(char *msg, t_list *list)
+
+void	print_index(char *msg, t_list *list)
 {
 	t_list	*p;
 
@@ -44,7 +45,7 @@ void print_index(char *msg, t_list *list)
 	}
 	while (p)
 	{
-		ft_printf("%d -> %d \n", p->content , p->index);
+		ft_printf("%d -> %d \n", p->content, p->index);
 		p = p->next;
 	}
 }

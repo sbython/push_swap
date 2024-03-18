@@ -31,7 +31,7 @@ void	pab(int i, t_list **s_a, t_list **s_b)
 		ft_printf("pb\n");
 		push(s_a, s_b);
 	}
-	else 
+	else
 	{
 		ft_printf("pa\n");
 		push(s_b, s_a);

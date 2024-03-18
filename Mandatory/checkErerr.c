@@ -6,7 +6,7 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 03:40:22 by msbai             #+#    #+#             */
-/*   Updated: 2024/03/14 23:42:43 by msbai            ###   ########.fr       */
+/*   Updated: 2024/03/18 08:18:11 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ererr(void *str)
 {
 	free(str);
-	ft_printf("Error\n");
+	ft_putstr_fd("Error\n", 2);
 	exit(1);
 }
 
@@ -60,14 +60,11 @@ char	*returnstr(int ac, char **av)
 	{
 		if (ft_isnotvalid(av[start]))
 		{
-			frfun(av);
 			ererr(ptr);
 		}
 		tmp = ptr;
-		av[start] = rm_zero(av[start]);
-		ptr = addspace(ft_strjoin(ptr, av[start]));
+		ptr = addspace(ft_strjoin(ptr, av[start++]));
 		free(tmp);
-		free(av[start++]);
 	}
 	return (ptr);
 }
@@ -78,7 +75,7 @@ int	checklist(char *str)
 	char	c;
 
 	i = 0;
-	if (!str )
+	if (!str)
 		return (0);
 	while (str[i])
 	{
