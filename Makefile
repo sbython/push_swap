@@ -6,7 +6,7 @@
 #    By: msbai <msbai@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/02 15:14:27 by msbai             #+#    #+#              #
-#    Updated: 2024/03/18 21:10:05 by msbai            ###   ########.fr        #
+#    Updated: 2024/03/19 05:07:04 by msbai            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,6 @@ MAIN = bonus/main.c
 BONUS_SRC = ./bonus/checkErerr.c \
             ./bonus/fillstack.c \
             ./bonus/ft_mouves.c \
-            ./bonus/ft_rules.c \
             ./bonus/get_next_line_utils.c \
             ./bonus/get_next_line.c\
 			./bonus/tmpft.c\

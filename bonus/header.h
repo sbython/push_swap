@@ -6,7 +6,7 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 23:56:37 by msbai             #+#    #+#             */
-/*   Updated: 2024/03/18 22:54:53 by msbai            ###   ########.fr       */
+/*   Updated: 2024/03/19 05:12:23 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,6 @@ void	check_move(t_list **a, t_list **b);
 //rmpft.c
 void	printf_list(char *msg, t_list *list);
 void	fr(long int t);
+char	*rm_zero(char *str);
 
 #endif

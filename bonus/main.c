@@ -6,7 +6,7 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 23:56:14 by msbai             #+#    #+#             */
-/*   Updated: 2024/03/18 22:56:06 by msbai            ###   ########.fr       */
+/*   Updated: 2024/03/19 05:09:37 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(int ac, char **av)
 		return (free(ptr), 0);
 	list_a = fillstack(ptr);
 	check_move(&list_a, &list_b);
-	if (if_sorted(list_a))
+	if (if_sorted(list_a) && ft_lstsize(list_b) == 0)
 		ft_printf("OK");
 	else
 		ft_printf("KO");
