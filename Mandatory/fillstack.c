@@ -6,7 +6,7 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 05:24:32 by msbai             #+#    #+#             */
-/*   Updated: 2024/03/18 21:18:29 by msbai            ###   ########.fr       */
+/*   Updated: 2024/03/19 04:22:41 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,12 @@ void	free_listarr(char **ptr)
 
 int	chakmiax(char *p, long int n)
 {
-	if (ft_strlen(p) > 11 || n < INT_MIN || n > INT_MAX)
-		return (1);
-	return (0);
+	char	*t;
+
+	t = rm_zero(p);
+	if (ft_strlen(t) > 11 || n < INT_MIN || n > INT_MAX)
+		return (free(t), 1);
+	return (free(t), 0);
 }
 
 int	checknbr(t_list *list, long int nbr)

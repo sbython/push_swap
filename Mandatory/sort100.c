@@ -6,7 +6,7 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 13:39:43 by msbai             #+#    #+#             */
-/*   Updated: 2024/03/18 21:28:42 by msbai            ###   ########.fr       */
+/*   Updated: 2024/03/19 04:53:12 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void	sort100(t_list **s_a, t_list **s_b)
 
 	len = ft_lstsize(*s_a);
 	if (len <= 400)
-		sort_nbr(s_a, s_b, list_to_arry(s_a), 10);
+		sort_nbr(s_a, s_b, list_to_arry(s_a), 15);
 	else
 		sort_nbr(s_a, s_b, list_to_arry(s_a), 30);
 	back_to_a(s_a, s_b);

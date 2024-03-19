@@ -18,9 +18,9 @@
 
 typedef struct s_list
 {
-	int					index;
-	long int			content;
-	struct s_list		*next;
+	int				index;
+	long int		content;
+	struct s_list	*next;
 }					t_list;
 
 void				ft_lstclear(t_list **lst, void (*del)(long int));

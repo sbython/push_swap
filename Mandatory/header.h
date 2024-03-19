@@ -6,7 +6,7 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 15:14:19 by msbai             #+#    #+#             */
-/*   Updated: 2024/03/18 22:59:41 by msbai            ###   ########.fr       */
+/*   Updated: 2024/03/19 05:02:32 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ void	frfun(char **ptr);
 int		checknbr(t_list *list, long int nbr);
 
 // this functions for control the stack
+char	*rm_zero(char *str);
 t_list	*fillstack(char *str);
 void	free_listarr(char **ptr);
 int		if_sorted(t_list *p1);
-char	*rm_zero(char *str);
 
 // this is fucntion used to manipulate stack
 void	swap(t_list **stack);

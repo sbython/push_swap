@@ -33,5 +33,5 @@ void	printf_list(char *msg, t_list *list)
 
 void	fr(long int t)
 {
-	(void) t;
+	(void)t;
 }
